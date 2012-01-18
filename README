@@ -137,8 +137,8 @@ METHODS
       $coder->ua( LWPx::ParanoidAgent->new );
 
 ACKNOWLEDGEMENTS
-    I borrow much of this inital code from "Geo::Coder::Google", it sped up
-    much of my work.
+    I borrowed much of this inital code from "Geo::Coder::Google", it sped
+    up much of my work and was a great help. Thanks.
 
 AUTHOR
     Lee Carmichael, "<lcarmich at cpan.org>"

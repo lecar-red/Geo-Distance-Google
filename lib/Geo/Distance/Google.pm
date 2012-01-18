@@ -415,8 +415,8 @@ You can also set your own User-Agent object:
 
 =head1 ACKNOWLEDGEMENTS
 
-I borrow much of this inital code from C<Geo::Coder::Google>, it sped up much of 
-my work.
+I borrowed much of this inital code from C<Geo::Coder::Google>, it sped up much of 
+my work and was a great help. Thanks.
 
 =head1 AUTHOR
 

@@ -1,17 +1,18 @@
 use ExtUtils::MakeMaker;
 WriteMakefile(
-    'NAME'      => 'Geo::Coder::Google',
-    'AUTHOR'    => 'Tatsuhiko Miyagawa <miyagawa@bulknews.net>',
+    'NAME'      => 'Geo::Distance::Google',
+    'AUTHOR'    => 'Lee Carmichael <lcarmich@cpan.org>',
     'LICENSE' => 'perl',
-    'VERSION_FROM' => 'lib/Geo/Coder/Google.pm', # finds $VERSION
-    'ABSTRACT_FROM' => 'lib/Geo/Coder/Google.pm',
+    'VERSION_FROM' => 'lib/Geo/Distance/Google.pm', # finds $VERSION
+    'ABSTRACT_FROM' => 'lib/Geo/Distance/Google.pm',
     'MIN_PERL_VERSION' => '5.008001',
     'PREREQ_PM' => {
-        LWP => 5.5,
-        JSON => 2.27,
+        LWP => 0,
+        JSON => 0,
         Encode => 0,
         URI => 0,
         'HTTP::Request' => 0,
+        'Params::Validate' => 0
     },
     'BUILD_REQUIRES' => {
         'Test::More' => 0.32,
@@ -22,8 +23,8 @@ WriteMakefile(
     META_MERGE      => {
         resources => {
             license     => 'http://dev.perl.org/licenses/',
-            bugtracker  => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Geo-Coder-Google',
-            repository  => 'https://github.com/miyagawa/geo-coder-google',
+            bugtracker  => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Geo-Distance-Google',
+            repository  => 'https://github.com/lecar-red/Geo-Distance-Google',
         },
     },
 );

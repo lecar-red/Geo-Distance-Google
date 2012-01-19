@@ -2,9 +2,9 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'      => 'Geo::Distance::Google',
     'AUTHOR'    => 'Lee Carmichael <lcarmich@cpan.org>',
-    'LICENSE' => 'perl',
-    'VERSION_FROM' => 'lib/Geo/Distance/Google.pm', # finds $VERSION
-    'ABSTRACT_FROM' => 'lib/Geo/Distance/Google.pm',
+    'LICENSE'   => 'perl',
+    'VERSION_FROM'     => 'lib/Geo/Distance/Google.pm', # finds $VERSION
+    'ABSTRACT_FROM'    => 'lib/Geo/Distance/Google.pm',
     'MIN_PERL_VERSION' => '5.008001',
     'PREREQ_PM' => {
         LWP => 0,
@@ -23,8 +23,10 @@ WriteMakefile(
     META_MERGE      => {
         resources => {
             license     => 'http://dev.perl.org/licenses/',
-            bugtracker  => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Geo-Distance-Google',
+            bugtracker  => 'https://github.com/lecar-red/Geo-Distance-Google/issues',
             repository  => 'https://github.com/lecar-red/Geo-Distance-Google',
         },
-    },
+    }, 
+    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+    clean               => { FILES => 'WWW-DirectAdmin-API-*' }
 );

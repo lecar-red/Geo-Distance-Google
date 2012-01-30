@@ -4,10 +4,10 @@ use warnings;
 # update with test count
 use Test::More qw( no_plan );
 use Test::Exception;
-use Data::Dumper qw( Dumper );
 
-# tmp
-use lib qw( lib );
+# distance and duration values shift widely
+use Test::Number::Delta within => 1000;
+use Data::Dumper qw( Dumper );
 
 use Geo::Distance::Google;
 
@@ -20,10 +20,12 @@ use Geo::Distance::Google;
     );
 
     is $distance->[0]->{destinations}->[0]->{distance}->{text},  '3,482 km', 'distance text';
-    is $distance->[0]->{destinations}->[0]->{distance}->{value}, 3482426,    'distance value';
+    delta_ok $distance->[0]->{destinations}->[0]->{distance}->{value}, 3482426, 
+        'distance value';
 
     is $distance->[0]->{destinations}->[0]->{duration}->{text},  '1 day 10 hours', 'duration text';
-    is $distance->[0]->{destinations}->[0]->{duration}->{value}, 122354, 'duration value';
+    delta_ok $distance->[0]->{destinations}->[0]->{duration}->{value}, 122354, 
+        'duration value';
 }
 
 # test complex look ups

@@ -413,6 +413,27 @@ You can also set your own User-Agent object:
 
   $coder->ua( LWPx::ParanoidAgent->new );
 
+=head2 debug_level
+
+Set to true to get extra debugging information
+
+=head2 encode_urlsafe
+
+Encodes url 
+
+=head2 decode_urlsafe_base64 
+
+Decodes url 
+
+=head2 make_signature
+
+Creates google friendly signature
+
+=head2 raw_distance
+
+Returns raw json response from google API request
+
+
 =head1 ACKNOWLEDGEMENTS
 
 I borrowed much of this inital code from C<Geo::Coder::Google>, it sped up much of 
@@ -442,7 +463,7 @@ You can also look for information at:
 
 =item * RT: CPAN's request tracker (report bugs here)
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Geo-Distance-Google>
+L<https://github.com/lecar-red/Geo-Distance-Google/issues>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
